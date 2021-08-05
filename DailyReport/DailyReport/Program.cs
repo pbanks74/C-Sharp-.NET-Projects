@@ -22,10 +22,11 @@ namespace DailyReport
             string currentCourse = Console.ReadLine();
             Console.WriteLine("\nCongrats on making it to " + currentCourse + "!");
 
-            //asks student what page number, must first assign to a string 
+            //asks student what page number, must first assign to a string then convert to Int
             Console.WriteLine("\nWhat page number are you on?");
             string pageNumber = Console.ReadLine();
-            Console.WriteLine("\nCongrats on making to page " + pageNumber + "!");
+            int page_number = Convert.ToInt32(pageNumber);
+            Console.WriteLine("\nCongrats on making to page " + page_number + "!");
             Console.WriteLine("\nDo you need help with anything? Please answer \"true\" or \"false.\"");
 
             // converts string to bool
@@ -35,9 +36,12 @@ namespace DailyReport
             string positiveExperiences = Console.ReadLine();
             Console.WriteLine("\nIs there any other feedback you would like to provide? Please be specific.");
             string feedback = Console.ReadLine();
+
+            // first assign string then convert to Int
             Console.WriteLine("\nHow many hours did you study today?");
             string hoursStudied = Console.ReadLine();
-            Console.WriteLine("\nCongrats on studying " + hoursStudied + " hours today, you have completed the Daily Report!");
+            int hours_studied = Convert.ToInt32(hoursStudied);
+            Console.WriteLine("\nCongrats on studying " + hours_studied + " hours today, you have completed the Daily Report!");
             Console.ReadLine();
         }
     }
