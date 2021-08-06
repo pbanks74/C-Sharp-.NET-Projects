@@ -16,6 +16,7 @@ namespace SpeedysApprovalProgram
             Console.WriteLine("\nDo you qualify for car insurance?");
             Console.WriteLine("Answer just a few questions to find out...");
             Console.WriteLine("-------------------");
+
             // Asks user age and saves input in a variable
             Console.WriteLine("\nWhat is your age?");
             string years = Console.ReadLine();
