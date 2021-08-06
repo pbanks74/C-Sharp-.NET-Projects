@@ -10,13 +10,14 @@ namespace BooleanLoopApp
     {
         static void Main(string[] args)
         {
+            // Greeting
             Console.WriteLine("Paul's While Loop");
             Console.WriteLine("==============================");
             Console.WriteLine("\nGuess a number between 1 and 9:");
             int number = Convert.ToInt32(Console.ReadLine());
-            bool correctNum = number == 7;
+            bool correctNum = number == 7; //sets value of bool
 
-            do
+            do // Do below loop while bool is not true 
             {
                 switch (number)
                 {
@@ -39,14 +40,14 @@ namespace BooleanLoopApp
                         Console.WriteLine("You guessed right, the number was 7, Yay!");
                         correctNum = true;
                         break;
-                    default:
+                    default: // default message if bool is not true and above cases do not apply
                         Console.WriteLine("You have guessed incorrectly.");
                         Console.WriteLine("Guess a number between 1 and 9:");
                         number = Convert.ToInt32(Console.ReadLine());
                         break;
                 }
             }
-            while (!correctNum);
+            while (!correctNum); // Do the above loop while the bool variable is not true
 
             Console.ReadLine();
         }
