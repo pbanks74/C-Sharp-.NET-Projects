@@ -16,6 +16,7 @@ namespace PackageExpress
             Console.WriteLine("========================================");
             Console.WriteLine("\nPlease enter the package weight:");
             int pkgWeight = Convert.ToInt32(Console.ReadLine());
+
             // gives user error message if weight is greater than 50
             if (pkgWeight > 50)
             {
