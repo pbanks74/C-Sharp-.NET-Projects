@@ -49,6 +49,21 @@ namespace BooleanLoopApp
             }
             while (!correctNum); // Do the above loop while the bool variable is not true
 
+            
+
+            // very basic while loop. sets variable at 0
+            // iterates through and breaks when greater than 10
+            int i = 0;
+            while (true)
+            {
+                Console.WriteLine("i = {0}", i);
+
+                i++;
+
+                if (i > 10)
+                    break;
+            }
+
             Console.ReadLine();
         }
     }
