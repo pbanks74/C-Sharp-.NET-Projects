@@ -22,6 +22,7 @@ namespace PackageExpress
             {
                 Console.WriteLine("Package too heavy to be shipped via Package Express. Have a good day.");
                 Console.ReadLine();
+                Environment.Exit(0);
             }
             // Saves user input for width, height and length
             Console.WriteLine("\nPlease enter the package width:");
@@ -36,6 +37,7 @@ namespace PackageExpress
             {
                 Console.WriteLine("Package too big to be shipped via Package Express. Have a good day.");
                 Console.ReadLine();
+                Environment.Exit(0);
             }
 
             // Calculates estimated shipping total
