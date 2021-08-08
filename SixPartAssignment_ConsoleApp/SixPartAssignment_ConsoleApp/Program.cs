@@ -30,9 +30,14 @@ using System.Collections.Generic;
         }
 
         // a loop that prints off each string in the array on a seperate line
+        foreach (string p in namesArray)
+        {
+            Console.WriteLine(p);
+        }
         
         // prints namesArray[1] to test if for loop works
-        Console.WriteLine(namesArray[1]);
+        //Console.WriteLine(namesArray[1]);
+
 
 
         Console.ReadLine();
