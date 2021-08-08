@@ -26,7 +26,7 @@ using System.Collections.Generic;
         // a loop that iterates through each string and adds user's input end of each
         for (int p = 0; p < namesArray.Length; p++)
         {
-            string.Concat(userColor);
+            namesArray += userColor;
         }
 
         // a loop that prints off each string in the array on a seperate line
