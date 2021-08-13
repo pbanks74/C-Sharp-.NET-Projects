@@ -86,7 +86,7 @@ using System.Collections.Generic;
 
 
         //============== PART 4 =========================================================
-        
+
         List<string> ColorList = new List<string>();
         ColorList.Add("green");
         ColorList.Add("blue");
@@ -101,28 +101,87 @@ using System.Collections.Generic;
         Console.WriteLine("\nPlease enter a color to see if there is a match on the list:");
         string input = Console.ReadLine();
 
-        for (int z = 0; z < ColorList.Count; z++)
-        {
-            if (input == color)
+
+        // Checks to see if the item is in the list
+        while (true)
+            if (ColorList.Contains(input))
             {
-                Console.WriteLine("Yes " + color + " is on the list!");
+                Console.WriteLine("Yes " + input + " is on the list!");
+                break;
             }
             else
             {
                 Console.WriteLine("Sorry " + input + " is not on the list.");
+                break;
             }
-        }
 
 
 
         //============== PART 5 =========================================================
 
-        
+        // A list of strings that has at least two identical strings in the list
+        List<string> animalList = new List<string>();
+
+        animalList.Add("dog");
+        animalList.Add("cat");
+        animalList.Add("bird");
+        animalList.Add("dog");
+        animalList.Add("rabbit");
+        animalList.Add("snake");
+        animalList.Add("deer");
+
+        // asks user to enter an animal name
+        Console.WriteLine("\nPlease enter an animal name to see if there is a match on the list:");
+        string user_input = Console.ReadLine();
+
+
+        // iterates through the animalList and displays if there is a match, if not displays message to user.
+        while (true)
+            if (animalList.Contains(user_input))
+            {
+                Console.WriteLine("Yes " + user_input + " is on the list!");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Sorry " + user_input + " is not on the list.");
+                break;
+            }
 
         //============== PART 6 =========================================================
 
+        List<string> fruitList = new List<string>();
+
+        fruitList.Add("apple");
+        fruitList.Add("pear");
+        fruitList.Add("banana");
+        fruitList.Add("strawberry");
+        fruitList.Add("orange");
+        fruitList.Add("grape");
+        fruitList.Add("lemon");
+        fruitList.Add("lime");
+        fruitList.Add("pinnapple");
+        fruitList.Add("apple");
+
+        // foreach loop that evaluates each item in the list
+        // displays a message showing the string
+        // and whether or not it has already appeared in the list.
+
+        foreach (var fruit in fruitList)
+        {
+            if ()
+            {
+                Console.WriteLine(fruit + " is a duplicate");
+            }
+            else
+            {
+                Console.WriteLine(fruit);
+            }
+
+        }
+           
+
 
         Console.ReadLine();
-        }
     }
-
+}
