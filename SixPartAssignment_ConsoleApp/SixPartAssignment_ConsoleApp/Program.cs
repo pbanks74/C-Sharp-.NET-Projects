@@ -15,7 +15,6 @@ using System.Collections.Generic;
         Console.WriteLine("\nBy: Paul Fairbanks, 2021");
         Console.WriteLine("\n=======================================");
 
-
         // creates a  one-dimensional array of strings
         string[] namesArray = { "The kayak is ", "The boat is ", "The car is ", "The house is ", "The dog is "};
 
@@ -165,23 +164,20 @@ using System.Collections.Generic;
         fruitList.Add("apple");
         fruitList.Add("banana");
 
-        // foreach loop that evaluates each item in the list
+        // foreach loop that evaluates each item in the list and adds duplicates to new list
         foreach (var fruit in fruitList)
         {
-            if (!fruitList.Contains(fruit))
-                fruitList.Add(fruit);
-            else
+            if (duplicates.Contains(fruit))
+            {
                 duplicates.Add(fruit);
+                Console.WriteLine(fruit + " has not been seen");
+            }     
+            else
+            {
+                Console.WriteLine(fruit + " has already been seen");
+            }     
         }
-
-        // displays list without duplicate
-        foreach (var fruit in fruitList)
-            Console.WriteLine(fruit);
-
-        // displays duplicates list
-        foreach (var fruit in duplicates)
-            Console.WriteLine(fruit + " is a duplicate");
-
         Console.ReadLine();
     }
+           
 }
