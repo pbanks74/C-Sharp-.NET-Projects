@@ -151,6 +151,7 @@ using System.Collections.Generic;
         //============== PART 6 =========================================================
 
         List<string> fruitList = new List<string>();
+        List<string> duplicates = new List<string>();
 
         fruitList.Add("apple");
         fruitList.Add("pear");
@@ -162,25 +163,24 @@ using System.Collections.Generic;
         fruitList.Add("lime");
         fruitList.Add("pinnapple");
         fruitList.Add("apple");
+        fruitList.Add("banana");
 
         // foreach loop that evaluates each item in the list
-        // displays a message showing the string
-        // and whether or not it has already appeared in the list.
-
         foreach (var fruit in fruitList)
         {
-            if ()
-            {
-                Console.WriteLine(fruit + " is a duplicate");
-            }
+            if (!fruitList.Contains(fruit))
+                fruitList.Add(fruit);
             else
-            {
-                Console.WriteLine(fruit);
-            }
-
+                duplicates.Add(fruit);
         }
-           
 
+        // displays list without duplicate
+        foreach (var fruit in fruitList)
+            Console.WriteLine(fruit);
+
+        // displays duplicates list
+        foreach (var fruit in duplicates)
+            Console.WriteLine(fruit + " is a duplicate");
 
         Console.ReadLine();
     }
