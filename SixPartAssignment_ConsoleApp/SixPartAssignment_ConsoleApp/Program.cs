@@ -101,18 +101,14 @@ using System.Collections.Generic;
         string input = Console.ReadLine();
 
 
-        // Checks to see if the item is in the list
-        while (true)
-            if (ColorList.Contains(input))
+        // Checks to see if the user input matches a color in the list and displays it
+        for (int w = 0; w < ColorList.Count; w++)
+        {
+            if (input == ColorList[w])
             {
-                Console.WriteLine("Yes " + input + " is on the list!");
-                break;
+                Console.WriteLine(input + " occurs at idex position: " + ColorList.IndexOf(input));
             }
-            else
-            {
-                Console.WriteLine("Sorry " + input + " is not on the list.");
-                break;
-            }
+        }
 
 
 
@@ -135,17 +131,19 @@ using System.Collections.Generic;
 
 
         // iterates through the animalList and displays if there is a match, if not displays message to user.
-        while (true)
-            if (animalList.Contains(user_input))
+        for (int u = 0; u < animalList.Count; u++)
+        {
+            if (user_input == animalList[u])
             {
-                Console.WriteLine("Yes " + user_input + " is on the list!");
+                Console.WriteLine(user_input + " occurs at idex position: " + ColorList.IndexOf(user_input));
                 break;
             }
             else
             {
-                Console.WriteLine("Sorry " + user_input + " is not on the list.");
+                Console.WriteLine(user_input + " is not on the list");
                 break;
             }
+        }
 
         //============== PART 6 =========================================================
 
@@ -169,13 +167,13 @@ using System.Collections.Generic;
         {
             if (duplicates.Contains(fruit))
             {
-                duplicates.Add(fruit);
-                Console.WriteLine(fruit + " has not been seen");
+                Console.WriteLine(fruit + " has already been seen");
             }     
             else
             {
-                Console.WriteLine(fruit + " has already been seen");
-            }     
+                Console.WriteLine(fruit + " has not been seen");
+            }
+            duplicates.Add(fruit);
         }
         Console.ReadLine();
     }
