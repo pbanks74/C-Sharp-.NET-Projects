@@ -128,24 +128,25 @@ using System.Collections.Generic;
         // asks user to enter an animal name
         Console.WriteLine("\nPlease enter an animal name to see if there is a match on the list:");
         string user_input = Console.ReadLine();
-
+        
 
         // iterates through the animalList and displays if there is a match, if not displays message to user.
-        for (int u = 0; u < animalList.Count; u++)
+        foreach (string animal in animalList)
         {
-            if (user_input == animalList[u])
+            if (animalList.Contains(user_input))
             {
-                while (true)
-                {
-                    Console.WriteLine(user_input + " occurs at idex position: " + ColorList.IndexOf(user_input));
-                    break;
+                int h = 0;
+                while ((h = animalList.IndexOf(user_input, h)) != -1)
+                { 
+                    Console.WriteLine("index: " + h);
+                    h++;
                 }
             }
             else
             {
                 Console.WriteLine(user_input + " is not on the list");
-                break;
             }
+            break;
         }
 
         //============== PART 6 =========================================================
