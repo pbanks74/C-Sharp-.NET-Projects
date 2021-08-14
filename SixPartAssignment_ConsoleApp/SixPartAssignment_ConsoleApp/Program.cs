@@ -135,8 +135,11 @@ using System.Collections.Generic;
         {
             if (user_input == animalList[u])
             {
-                Console.WriteLine(user_input + " occurs at idex position: " + ColorList.IndexOf(user_input));
-                break;
+                while (true)
+                {
+                    Console.WriteLine(user_input + " occurs at idex position: " + ColorList.IndexOf(user_input));
+                    break;
+                }
             }
             else
             {
