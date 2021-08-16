@@ -26,6 +26,7 @@ namespace IntegerListAssignment
                 }
                 Console.ReadLine();
             }
+            // catches a user error and displays a message
             catch (DivideByZeroException)
             {
                 Console.WriteLine("Please do not divide by zero.");
