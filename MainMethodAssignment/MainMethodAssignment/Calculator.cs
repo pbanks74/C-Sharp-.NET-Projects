@@ -19,8 +19,12 @@ namespace MainMethodAssignment
         // method to add decimals
         public decimal Add(decimal d1, decimal d2)
         {
-            return Decimal.ToInt32(d1 + d2);
+            return Convert.ToInt32(d1 + d2);
         }
-        
+        public string Add(string a, string b)
+        {
+            return Convert.ToInt32(a + b);
+        }
+
     }
 }

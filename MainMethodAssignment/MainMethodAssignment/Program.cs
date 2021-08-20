@@ -10,7 +10,7 @@ namespace MainMethodAssignment
     {
         static void Main(string[] args)
         {
-            // asks the user to enter a number and assigns input to a variable
+            // asks the user to enter a number and assigns input to a integer variable
             Console.WriteLine("Please enter a number to perform math operations on:");
             int userInput = Convert.ToInt32(Console.ReadLine());
 
@@ -21,14 +21,31 @@ namespace MainMethodAssignment
             // creates a variable for the math operation
             result1 = calculator.Add(userInput, 10);
             
-            // displays anser to the screen
+            // displays answer to the screen
             Console.WriteLine(userInput + " plus ten equals: " + result1);
 
-            Console.WriteLine("Please enter a decimal to perform math operations on:");
+            // asks the user to enter a number and assigns input to a decimal variable
+            Console.WriteLine("Please enter a number to perform math operations on:");
             decimal userInput2 = Convert.ToDecimal(Console.ReadLine());
+
+            // creates a variable for the math operation
             decimal result2 = 0;
-            result2 = (int)calculator.Add(userInput2, .3m);
-            Console.WriteLine(userInput2 + " plus three tenths equals: " + result2);
+            result2 = (int)calculator.Add(userInput2, 10);
+
+            // displays answer to the screen
+            Console.WriteLine(userInput2 + " plus ten equals: " + result2);
+
+            // asks the user to enter a number and assigns input to a string variable
+            Console.WriteLine("Please enter a number to perform math operations on:");
+            string userInput3 = Convert.ToString(Console.ReadLine());
+
+            // creates a variable for the math operation
+            int result3 = 0;
+            result3 = calculator.Add(userInput3, fun);
+
+            // displays answer to the screen
+            Console.WriteLine(userInput3 + " plus ten equals " + result3);
+
 
             Console.ReadLine();
         }
