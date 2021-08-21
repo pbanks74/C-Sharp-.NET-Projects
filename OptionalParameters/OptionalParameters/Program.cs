@@ -13,19 +13,34 @@ namespace OptionalParameters
             // instantiates the class
             Math math = new Math();
 
-            // asks the user to input numbers and saves as variables
+            // asks the user to input a number and saves as a variable
             Console.WriteLine("Please enter a number:");
             int userInput = Convert.ToInt32(Console.ReadLine());
+
+
             Console.WriteLine("Optional, enter a second number:");
-            int userInput2 = Convert.ToInt32(Console.ReadLine());
 
-            // calls the method and passes in the variables
-            int result1 = math.Add(userInput, userInput2);
+            // trys the second user input, catches if unsucessaful and uses default parameter.
+            try
+            {
+                int userInput2 = Convert.ToInt32(Console.ReadLine());
 
-            // displays the results 
-            Console.WriteLine(result1);
+                // calls the method and passes in the variables
+                int result1 = math.Add(userInput, userInput2);
 
-            Console.ReadLine();
+                // displays the results 
+                Console.WriteLine(result1);
+            }
+            catch (FormatException)
+            {
+                int result1 = math.Add(userInput);
+                Console.WriteLine(userInput + " plus ten equals " + result1);
+            }
+            finally
+            {
+                Console.ReadLine();
+            }
+            
         }
     }
 }
