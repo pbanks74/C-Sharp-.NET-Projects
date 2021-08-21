@@ -30,17 +30,17 @@ namespace MainMethodAssignment
 
             // creates a variable for the math operation
             decimal result2 = 0;
-            result2 = (int)calculator.Add(userInput2, 10);
+            result2 = (int)calculator.Add(userInput2, 50);
 
             // displays answer to the screen
-            Console.WriteLine(userInput2 + " plus ten equals: " + result2);
+            Console.WriteLine(userInput2 + " plus fifty equals: " + result2);
 
             // asks the user to enter a number and assigns input to a string variable
             Console.WriteLine("Please enter a number to perform math operations on:");
             string userInput3 = Convert.ToString(Console.ReadLine());
 
             // creates a variable for the math operation
-            int result3 = calculator.Add(userInput3, "three");
+            int result3 = calculator.Add(userInput3, "3");
 
             // displays answer to the screen
             Console.WriteLine(userInput3 + " plus three equals " + result3);
