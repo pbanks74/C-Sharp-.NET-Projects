@@ -40,11 +40,10 @@ namespace MainMethodAssignment
             string userInput3 = Convert.ToString(Console.ReadLine());
 
             // creates a variable for the math operation
-            int result3 = 0;
-            result3 = calculator.Add(userInput3, fun);
+            int result3 = calculator.Add(userInput3, "three");
 
             // displays answer to the screen
-            Console.WriteLine(userInput3 + " plus ten equals " + result3);
+            Console.WriteLine(userInput3 + " plus three equals " + result3);
 
 
             Console.ReadLine();

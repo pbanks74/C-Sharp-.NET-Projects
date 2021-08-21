@@ -21,7 +21,7 @@ namespace MainMethodAssignment
         {
             return Convert.ToInt32(d1 + d2);
         }
-        public string Add(string a, string b)
+        public int Add(string a, string b)
         {
             return Convert.ToInt32(a + b);
         }
