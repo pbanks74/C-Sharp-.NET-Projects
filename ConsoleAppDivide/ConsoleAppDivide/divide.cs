@@ -9,7 +9,7 @@ namespace ConsoleAppDivide
     
     public class divide
     {
-        public divide()
+        public void Divide()
         {
 
         }
