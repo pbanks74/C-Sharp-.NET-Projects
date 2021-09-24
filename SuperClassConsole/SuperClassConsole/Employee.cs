@@ -11,4 +11,5 @@ namespace SuperClassConsole
     {
         public int Id { get; set; }
     }
+
 }
