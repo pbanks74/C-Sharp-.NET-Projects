@@ -12,11 +12,8 @@ namespace Abstraction
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        // assigns method name
-        public void SayName()
-        {
-            Console.WriteLine("Name: " + FirstName + " " + LastName);
-        }
+        // creates an abstract method
+        public abstract void SayName();
     }
     
 }
