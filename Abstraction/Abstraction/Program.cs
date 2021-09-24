@@ -15,5 +15,10 @@ namespace Abstraction
             employee.SayName();
             Console.ReadLine();
         }
+        // creates an object of type IQuittable from the interface and calls the method on it
+        interface IQuittable
+        {
+            void Quit();
+        }
     }
 }
