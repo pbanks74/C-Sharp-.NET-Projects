@@ -14,7 +14,11 @@ namespace SuperClassConsole
             // Employee inherits from Person class and adds Id parameter
             Employee employee = new Employee() { FirstName = "Sample", LastName = "Student", Id = 001 };
             Console.ReadLine();
+        }
 
+        private static void SayName()
+        {
+            throw new NotImplementedException();
         }
     }
 }
