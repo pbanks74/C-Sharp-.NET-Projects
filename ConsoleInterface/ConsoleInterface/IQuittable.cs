@@ -8,7 +8,7 @@ namespace ConsoleInterface
 {
     interface IQuittable
     {
-        // defines method inside interface
+        // creates void method inside interface
         void Quit();
     }
 }

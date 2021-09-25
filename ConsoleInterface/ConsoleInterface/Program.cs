@@ -10,10 +10,13 @@ namespace ConsoleInterface
     {
         static void Main(string[] args)
         {
-            // instantiates an object and calls the method
+            // instantiates an Employee object 
             Employee employee = new Employee() { FirstName = "Sample", LastName = "Student" };
+            
+            // calls methods
             employee.SayName();
             employee.Quit();
+            
             Console.ReadLine();
         }
     }
