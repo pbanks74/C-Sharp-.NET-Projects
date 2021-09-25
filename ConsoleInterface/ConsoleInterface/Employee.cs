@@ -12,9 +12,9 @@ namespace ConsoleInterface
         {
             Console.WriteLine("Name: " + FirstName + " " + LastName);
         }
-        public void Quit()
+        public override void Quit()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(FirstName + " " + LastName + " has quit");
         }
     }
 }

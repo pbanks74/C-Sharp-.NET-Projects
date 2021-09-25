@@ -13,11 +13,8 @@ namespace ConsoleInterface
             // instantiates an object and calls the method
             Employee employee = new Employee() { FirstName = "Sample", LastName = "Student" };
             employee.SayName();
+            employee.Quit();
             Console.ReadLine();
-        }
-        interface IQuittable
-        {
-            void Quit();
         }
     }
 }
