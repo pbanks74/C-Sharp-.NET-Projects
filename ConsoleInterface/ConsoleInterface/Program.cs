@@ -13,10 +13,15 @@ namespace ConsoleInterface
             // instantiates an Employee object 
             Employee employee = new Employee() { FirstName = "Sample", LastName = "Student" };
             
-            // calls methods
+            // calls method
             employee.SayName();
-            employee.Quit();
-            
+
+            // uses polymorphism to create an object of IQuittable
+            IQuittable employee1 = new Employee();
+
+            // calls method
+            employee1.Quit();
+   
             Console.ReadLine();
         }
     }

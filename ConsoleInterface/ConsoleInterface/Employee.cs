@@ -17,7 +17,7 @@ namespace ConsoleInterface
         // adds functionality to interface method
         public void Quit()
         {
-            Console.WriteLine(FirstName + " " + LastName + " has quit");
+            Console.WriteLine("The employee has quit");
         }
     }
 }
