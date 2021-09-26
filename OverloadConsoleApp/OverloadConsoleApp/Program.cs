@@ -6,11 +6,27 @@ using System.Threading.Tasks;
 
 namespace OverloadConsoleApp
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee();
+            // creates 4 enployee objects
+            Employee employee1 = new Employee();
+            Employee employee2 = new Employee();
+            Employee employee3 = new Employee();
+            Employee employee4 = new Employee();
+
+            //assigns Id values
+            employee1.Id = 1;
+            employee2.Id = 2;
+            employee3.Id = 3;
+            employee4.Id = 4;
+
+            // prints results of comparison to the screen
+            Console.WriteLine(employee1 == employee2);
+            Console.WriteLine(employee3 != employee4);
+
+            Console.ReadLine();
         }
     }
 }

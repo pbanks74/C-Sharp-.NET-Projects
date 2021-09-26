@@ -9,12 +9,35 @@ namespace OverloadConsoleApp
     // created Employee class and assigned it a property
     public class Employee
     {
+        // assigns an Id property
         public int Id { get; set; }
-
-        public static Employee operator== (Employee employee)
+        
+        // overloads the comparison operator == and passes in parameters
+        public static bool operator ==(Employee employee1, Employee employee2)
         {
-            employee.Id.Equals(employee.Id);
-            return employee;
+            // if statement compares the two parameters
+            if (employee1.Id.Equals(employee2.Id))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        // overloads the comparison operator != and passes in parameters
+        public static bool operator !=(Employee employee3, Employee employee4)
+        {
+            // if statement compares the two parameters
+            if (employee3.Id.Equals(employee4.Id))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
