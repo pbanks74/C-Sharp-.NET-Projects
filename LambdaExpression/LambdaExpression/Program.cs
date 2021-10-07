@@ -75,20 +75,38 @@ namespace LambdaExpression
             Employees.Add(emp9);
             Employees.Add(emp10);
 
+            // Lambda function that creates a new List and adds employees with the FirstName "Joe" and prints to console
+            List<Employee> newList = Employees.Where(x => x.Firstname == "Joe" ).ToList();
 
-            // created a new list to add employees to
-            List<Employee> DuplicateEmployees = new List<Employee>();
-
-            //  foreach loop that adds employees with the name Joe to new list
-            foreach (Employee Employee in Employees)
+            foreach (Employee Employee in newList)
             {
-                if (Employee.Firstname == "Joe")
-                {
-                    
-                    DuplicateEmployees.Add(Employee);
-                }
+                Console.WriteLine(Employee.Firstname + " " + Employee.LastName);
             }
-            Console.WriteLine(DuplicateEmployees);
+
+            // Lambda function that creates a List of all employees with an Id greater than 5 and prints to console
+            List<Employee> newList2 = Employees.Where(x => x.Id > 5).ToList();
+
+            foreach (Employee Employee in newList2)
+            {
+                Console.WriteLine(Employee.Firstname + " " + Employee.LastName + ": " + Employee.Id);
+            }
+
+            //***** created a new list to add employees to *******
+
+            //List<Employee> DuplicateEmployees = new List<Employee>();
+
+            //  ******foreach loop that adds employees with the name Joe to new list ******
+
+            //foreach (Employee Employee in Employees)
+            //{
+            //    if (Employee.Firstname == "Joe")
+            //    {
+
+            //        DuplicateEmployees.Add(Employee);
+            //        Console.WriteLine(Employee.Firstname + " " + Employee.LastName);
+            //    }
+            //}
+            
             Console.ReadLine();
 
         }
