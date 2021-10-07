@@ -91,21 +91,21 @@ namespace LambdaExpression
                 Console.WriteLine(Employee.Firstname + " " + Employee.LastName + ": " + Employee.Id);
             }
 
-            //***** created a new list to add employees to *******
+            // creates a new list to add employees to 
 
-            //List<Employee> DuplicateEmployees = new List<Employee>();
+            List<Employee> DuplicateEmployees = new List<Employee>();
 
-            //  ******foreach loop that adds employees with the name Joe to new list ******
+            // foreach loop that adds employees with the name Joe to new list 
 
-            //foreach (Employee Employee in Employees)
-            //{
-            //    if (Employee.Firstname == "Joe")
-            //    {
+            foreach (Employee Employee in Employees)
+            {
+                if (Employee.Firstname == "Joe")
+                {
 
-            //        DuplicateEmployees.Add(Employee);
-            //        Console.WriteLine(Employee.Firstname + " " + Employee.LastName);
-            //    }
-            //}
+                    DuplicateEmployees.Add(Employee);
+                    Console.WriteLine(Employee.Firstname + " " + Employee.LastName);
+                }
+            }
             
             Console.ReadLine();
 
