@@ -11,6 +11,10 @@ namespace CarInsurance.Controllers
         public ActionResult Index()
         {
             return View();
-        }     
+        }
+        public ActionResult Quote()
+        {
+            return View();
+        }
     }
 }
