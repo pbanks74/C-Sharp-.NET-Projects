@@ -1,0 +1,27 @@
+﻿@using CarInsurance.Models;
+@model  List<Insuree>
+
+@{
+  ViewBag.Title = "Index";
+}
+
+
+
+        @foreach (var quote in Model)
+        {
+          <ul>
+            <li>
+              @Html.DisplayFor(modelItem => quote.FirstName)
+            </li>
+            <li>
+              @Html.DisplayFor(modelItem => quote.LastName)
+            </li>
+            <li>
+              @Html.DisplayFor(modelItem => quote.EmailAddress)
+            </li>
+            <li>
+              @Html.DisplayFor(modelItem => quote.Quote)
+            </li>
+          </ul>
+        }
+

@@ -96,13 +96,13 @@ namespace CarInsurance.Controllers
             if (insuree.DUI == true)
             {
                 double duiCost = Convert.ToDouble(insuree.Quote) * .25;
-                insuree.Quote = Convert.ToDecimal(duiCost);
+                insuree.Quote = Convert.ToDecimal(duiCost) + insuree.Quote;
             }
             // Full coverage cost
             if (insuree.CoverageType == true)
             {
                 double fullCoverageCost = Convert.ToDouble(insuree.Quote) * .50;
-                insuree.Quote = Convert.ToDecimal(fullCoverageCost);
+                insuree.Quote = Convert.ToDecimal(fullCoverageCost) + insuree.Quote;
             }
 
 
