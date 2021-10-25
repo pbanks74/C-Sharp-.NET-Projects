@@ -48,68 +48,65 @@ namespace CarInsurance.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,FirstName,LastName,EmailAddress,DateOfBirth,CarYear,CarMake,CarModel,DUI,SpeedingTickets,CoverageType,Quote")] Insuree insuree)
         {
-            // sets base quote
-            int quote = 50;
+            //*********Calculates Quote*********//
 
-            //determines insuree age
+            //sets base quote price at $50
+            insuree.Quote = 50;
+
+            //calculates age
             var today = DateTime.Today;
             var age = today.Year - insuree.DateOfBirth.Year;
 
-            // adds $50 if user is 18 or younger
-            if (age <= 18)
+            if (age < 26 && age >= 19)
             {
-                quote = quote + 100;
+                insuree.Quote = insuree.Quote + 50;
             }
-            // adds $50 if under 25 but over 18
-            else if (age < 25 && age >= 19)
+            else if (age <= 18)
             {
-                quote = quote + 50;
+                insuree.Quote = insuree.Quote + 100;
             }
-            // adds $25 if user is over 25
             else if (age > 25)
             {
-                quote = quote + 25;
+                insuree.Quote = insuree.Quote + 25;
             }
-            //adds $25 if car's year is before 2000
+            // Cars Year cost
             if (insuree.CarYear < 2000)
             {
-                quote = quote + 25;
+                insuree.Quote = insuree.Quote + 25;
             }
-            //adds $25 if car's year is after 2015
             else if (insuree.CarYear > 2015)
             {
-                quote = quote + 25;
+                insuree.Quote = insuree.Quote + 25;
             }
-            // adds $25 if car's Make is a Porsche
+            // Cars Make cost
             if (insuree.CarMake == "Porsche")
             {
-                quote = quote + 25;
+                insuree.Quote = insuree.Quote + 25;
             }
-            // adds additional $25 if car's make is a Porsche and model is 911 Carrera
             else if (insuree.CarMake == "Porsche" && insuree.CarModel == "911 Carrera")
             {
-                quote = quote + 25;
+                insuree.Quote = insuree.Quote + 25;
             }
-            // Adds $10 for every speeding ticket
+            // Speeding tickets cost
             for (int i = 0; i < insuree.SpeedingTickets; i++)
             {
-                quote = quote + 10;
+                insuree.Quote = insuree.Quote + 10;
             }
-            // Adds 25% if user has had DUI
+            // DUI cost
             if (insuree.DUI == true)
             {
-                double duiCost = quote * .25;
-                int intDuiCost = Convert.ToInt32(duiCost);
-                quote = quote + intDuiCost;
+                double duiCost = Convert.ToDouble(insuree.Quote) * .25;
+                insuree.Quote = Convert.ToDecimal(duiCost);
             }
-            // Adds 50% for full coverage 
+            // Full coverage cost
             if (insuree.CoverageType == true)
             {
-                double coverageCost = quote * .50;
-                int intCoverageCost = Convert.ToInt32(coverageCost);
-                quote = quote + intCoverageCost;
+                double fullCoverageCost = Convert.ToDouble(insuree.Quote) * .50;
+                insuree.Quote = Convert.ToDecimal(fullCoverageCost);
             }
-           
+
+
+            //Saves to database
             if (ModelState.IsValid)
             {
                 db.Insurees.Add(insuree);
@@ -117,7 +114,7 @@ namespace CarInsurance.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View("Quote", insuree);
+            return View(insuree);
         }
 
         // GET: Insuree/Edit/5
