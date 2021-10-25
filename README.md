@@ -1,2 +1,2 @@
-# C-Sharp-.NET-Projects
-This repository will contain projects completed within the Tech Academy's C# and .NET course
+# C# Projects
+These are a few projects I made using C# and .NET Framework
