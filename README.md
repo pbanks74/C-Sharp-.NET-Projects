@@ -1,6 +1,6 @@
 # C# Projects
 
-The Tech Academy's C# Course was a large focus and one of my favorites. It consisted of many assignments and projects that taught me basic C# fundementals as well as how to utilize the .NET framework to create complex dynammic applications.
+The Tech Academy's C# Course was a large focus and one of my favorites. It consisted of many assignments and projects that taught me basic C# fundementals as well as how to utilize the .NET framework to create complex dynamic applications.
 
 
 ## Projects
