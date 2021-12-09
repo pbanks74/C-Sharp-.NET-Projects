@@ -1,6 +1,7 @@
 # C# Projects
 
-These are a few projects I made using C# and .NET Framework
+The Tech Academy's C# Course was a large focus and one of my favorites. It consisted of many assignments and projects that taught me basic C# fundementals as well as how to utilize the .NET frameworks
+
 
 ## Projects
 
@@ -16,3 +17,6 @@ This ASP.NET Core application uses MVC to arrange the layout. Web application al
 
 ### Package Express
 Console application that accepts user input to calculate shipping costs based on the dimensions and weight of a package. Logic included to prompt user if package is too large/heavy to ship.
+
+## Conclusion
+The Tech Academy's C# Course taught me the basic C# fundementals and how to utilize the .NET framework to create very complex dynamic applications. Completing this course gives me absoliute confidence in being able to apply the skills learned to improve a companies operations and future goals.
